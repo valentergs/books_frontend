@@ -2,7 +2,9 @@ import {
   TODOS_LIVROS,
   INSERIR_LIVRO,
   DELETAR_LIVRO,
-  EDITAR_LIVRO
+  EDITAR_LIVRO,
+  SET_CURRENT,
+  CLEAR_CURRENT
 } from "../types";
 
 export default (state, action) => {
@@ -28,6 +30,16 @@ export default (state, action) => {
         livroState: state.livroState.map(x =>
           x.livro_id === action.payload.livro_id ? action.payload : x
         )
+      };
+    case SET_CURRENT:
+      return {
+        ...state,
+        current: action.payload
+      };
+    case CLEAR_CURRENT:
+      return {
+        ...state,
+        current: null
       };
     default:
       return state;

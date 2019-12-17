@@ -6,7 +6,9 @@ import {
   TODOS_LIVROS,
   INSERIR_LIVRO,
   DELETAR_LIVRO,
-  EDITAR_LIVRO
+  EDITAR_LIVRO,
+  CLEAR_CURRENT,
+  SET_CURRENT
 } from "../types";
 
 const LivroState = props => {
@@ -52,6 +54,14 @@ const LivroState = props => {
     });
   };
 
+  const setCurrent = livro => {
+    dispatch({ type: SET_CURRENT, payload: livro });
+  };
+
+  const clearCurrent = () => {
+    dispatch({ type: CLEAR_CURRENT });
+  };
+
   return (
     <LivroContext.Provider
       value={{
@@ -60,7 +70,9 @@ const LivroState = props => {
         todosLivros,
         inserirLivro,
         deletarLivro,
-        editarLivro
+        editarLivro,
+        setCurrent,
+        clearCurrent
       }}
     >
       {props.children}
