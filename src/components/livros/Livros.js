@@ -30,7 +30,7 @@ const useStyles = makeStyles({
 
 const Livros = () => {
   const livroContext = useContext(LivroContext);
-  const { livroState, todosLivros } = livroContext;
+  const { livroState, todosLivros, setCurrent } = livroContext;
   const classes = useStyles();
 
   useEffect(() => {
@@ -44,12 +44,12 @@ const Livros = () => {
         <TableHead className={classes.tableHead}>
           <TableRow>
             <TableCell align="left">Titulo / Autor</TableCell>
-            <TableCell align="left">Gênero</TableCell>
+            <TableCell align="left">CDD</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {livroState.map(row => (
-            <TableRow key={row.livro_id}>
+            <TableRow hover key={row.livro_id} onClick={() => setCurrent(row)}>
               <TableCell align="left">
                 <Typography variant="h6">{row.titulo}</Typography>
                 <Typography>{row.autor}</Typography>
