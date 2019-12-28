@@ -44,7 +44,7 @@ const Livros = () => {
         <TableHead className={classes.tableHead}>
           <TableRow>
             <TableCell align="left">Titulo / Autor</TableCell>
-            <TableCell align="left">CDD</TableCell>
+            {/* <TableCell align="left">CDD</TableCell> */}
           </TableRow>
         </TableHead>
         <TableBody>
@@ -54,7 +54,7 @@ const Livros = () => {
                 <Typography variant="h6">{row.titulo}</Typography>
                 <Typography>{row.autor}</Typography>
               </TableCell>
-              <TableCell align="left">
+              {/* <TableCell align="left">
                 <Typography>
                   <Chip
                     variant="default"
@@ -63,7 +63,7 @@ const Livros = () => {
                     label={row.cdd}
                   />
                 </Typography>
-              </TableCell>
+              </TableCell> */}
             </TableRow>
           ))}
         </TableBody>

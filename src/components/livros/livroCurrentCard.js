@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import clsx from "clsx";
 import Card from "@material-ui/core/Card";
@@ -15,6 +15,9 @@ import FavoriteIcon from "@material-ui/icons/Favorite";
 import ShareIcon from "@material-ui/icons/Share";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
+
+//Context
+import LivroContext from "../../context/livros/livroContext";
 
 const useStyles = makeStyles(theme => ({
   card: {
@@ -42,6 +45,8 @@ const useStyles = makeStyles(theme => ({
 export default function RecipeReviewCard() {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
+  const livroContext = useContext(LivroContext);
+  const { current } = livroContext;
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -65,7 +70,7 @@ export default function RecipeReviewCard() {
       />
       <CardMedia
         className={classes.media}
-        image="https://images-na.ssl-images-amazon.com/images/I/411FOd6NaDL._SX331_BO1,204,203,200_.jpg"
+        image={require(`../../assets/fotos/9788542215809.jpg`)}
         title="Paella dish"
       />
       <CardContent>

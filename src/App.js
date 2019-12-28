@@ -2,7 +2,7 @@ import React from "react";
 
 //Components
 // import Navbar from "./components/layout/Navbar";
-import MainPaneRV from "./components/layout/MainPaneRV";
+import MainPane from "./components/layout/MainPane";
 
 //Context
 import LivroState from "./context/livros/livroState";
@@ -11,7 +11,7 @@ const App = () => {
   return (
     <LivroState>
       <div className="App">
-        <MainPaneRV />
+        <MainPane />
       </div>
     </LivroState>
   );
