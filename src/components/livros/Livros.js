@@ -7,7 +7,6 @@ const Livros = () => {
 
   useEffect(() => {
     todosLivros();
-    // eslint-disable-next-line
   }, []);
 
   return (

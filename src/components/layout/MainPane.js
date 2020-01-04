@@ -8,13 +8,13 @@ const MainPane = () => {
     <div>
       <section className="top-container">
         <div className="caixa caixa-lista-livros">
-          <InserirLivros />
-        </div>
-        <div className="caixa caixa-detalhe-livro">
           <Livros />
         </div>
-        <div className="caixa caixa-novo-livro">
+        <div className="caixa caixa-detalhe-livro">
           <LivroCurrent />
+        </div>
+        <div className="caixa caixa-novo-livro">
+          <InserirLivros />
         </div>
       </section>
     </div>
