@@ -11,17 +11,20 @@ const Livros = () => {
 
   return (
     <div className="livros">
-      <div className="caixa-titulo">
+      <div className="caixa-cabeca">Livros Cadastrados</div>
+      <div className="caixa-corpo">
+        {/* <div className="caixa-titulo">
         Livros Cadastrados: {livroState.length}
+      </div> */}
+        <ul>
+          {livroState.map(linha => (
+            <li key={linha.livro_id} onClick={() => setCurrent(linha)}>
+              <h4>{linha.titulo}</h4>
+              <p>{linha.autor}</p>
+            </li>
+          ))}
+        </ul>
       </div>
-      <ul>
-        {livroState.map(linha => (
-          <li key={linha.livro_id} onClick={() => setCurrent(linha)}>
-            <h4>{linha.titulo}</h4>
-            <p>{linha.autor}</p>
-          </li>
-        ))}
-      </ul>
     </div>
   );
 };

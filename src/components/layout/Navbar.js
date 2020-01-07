@@ -4,7 +4,8 @@ const Navbar = () => {
   return (
     <div>
       <nav className="main-nav">
-        <ul>
+        <h1>Nossos livros</h1>
+        {/* <ul>
           <li>
             <a href="#">Home</a>
           </li>
@@ -17,7 +18,7 @@ const Navbar = () => {
           <li>
             <a href="#">Ajuda</a>
           </li>
-        </ul>
+        </ul> */}
       </nav>
     </div>
   );
