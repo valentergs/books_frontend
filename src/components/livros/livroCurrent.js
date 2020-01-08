@@ -17,7 +17,14 @@ const LivroCurrent = () => {
 
   return (
     <div>
-      <div className="caixa-cabeca">Detalhes da Obra</div>
+      <div className="caixa-cabeca">
+        <h3 className="caixa-cabeca-titulo">Detalhes da Obra</h3>
+        <div className="caixa-cabeca-icones">
+          <a href="#">
+            <i class="fas fa-edit"></i>
+          </a>
+        </div>
+      </div>
       <div className="caixa-corpo">
         {current === null ? (
           <p>Selecione um livro</p>
