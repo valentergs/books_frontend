@@ -21,7 +21,7 @@ const LivroCurrent = () => {
         <h3 className="caixa-cabeca-titulo">Detalhes da Obra</h3>
         <div className="caixa-cabeca-icones">
           <a href="#">
-            <i class="fas fa-edit"></i>
+            <i class="far fa-edit"></i>
           </a>
         </div>
       </div>
