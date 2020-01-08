@@ -16,10 +16,10 @@ const LivroCurrent = () => {
   // };
 
   return (
-    <div>
+    <div className="livro-current">
       <div className="caixa-cabeca">
         <h3 className="caixa-cabeca-titulo">Detalhes da Obra</h3>
-        <div className="caixa-cabeca-icones">
+        <div className="caixa-cabeca-itens">
           <a href="#">
             <i class="far fa-edit"></i>
           </a>

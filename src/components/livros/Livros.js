@@ -13,8 +13,11 @@ const Livros = () => {
     <div className="livros">
       <div className="caixa-cabeca">
         <div className="caixa-titulo">{livroState.length} livros</div>
-        <div className="caixa-cabeca-icones">
-          <a href="">
+        <div className="caixa-cabeca-itens">
+          <a href="#">
+            <i class="fas fa-search"></i>
+          </a>
+          <a href="#">
             <i class="far fa-plus-square" />
           </a>
         </div>
